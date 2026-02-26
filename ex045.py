@@ -1,30 +1,36 @@
-print('—='*16)
-print('\033[1mPedra, Papel & Tesoura\033[m'.center(39))
-print('—='*16)
-print()
-print(' \033[1mPEDRA(0), PAPEL(1), TESOURA(2)\033[m')
-print()
-print('\033[1;31mVEREMOS\033[m se é \033[1mCAPAZ\033[m de \033[1;34mGANHAR\033[m de mim!')
-print()
 from random import randint
-def jogar():
-    opcoes = ['PEDRA', 'PAPEL', 'TESOURA']
+itens = ('Pedra', 'Papel', 'Tesoura')
+pc = randint(0, 2)
 
-    #play do pc
-    pc = randint(0, 2)
-    jogada_pc = opcoes[pc]
+#ESTÉTICA
+print('———'*18)
+print('—='*27)
+print('ESCOLHA: \033[1;31mPEDRA(0)\033[m, \033[1mPAPEL(1) ou \033[1;34mTESOURA(2)\033[m'.center(50))
+print('—='*27)
+#ESTÉTICA
 
-    #jogada do player
-    player = int(input('JOGUE!: '))
-    p_player = opcoes[player]
+#JOGADA
+player_turn = int(input('JOGUE: '))
+jogada_pc = itens[pc].upper()
+jogada_player = itens[player_turn].upper()
+print(f'Você escolheu: {jogada_player}')
+from time import sleep
+print('PEDRA')
+sleep(0.6)
+print('PAPEL')
+sleep(0.6)
+print('TESOU-')
+sleep(0.8)
+print('RA!')
+print('———'*18)
+print(f'\033[1;34mSUA JOGADA: {jogada_player}\033[m | \033[1;31mJOGADA DO PC: {jogada_pc}\033[m')
+#JOGADA
 
-    print(f'Sua jogada: {p_player} | Computador: {jogada_pc}')
-    print()
-    if p_player == 'PEDRA' and jogada_pc == 'PEDRA' or p_player == 'PAPEL' and jogada_pc == 'PAPEL' or p_player == 'TESOURA' and jogada_pc == 'TESOURA':
-        print('\033[1;33mEMPATE!\033[m'.center(50))
-    elif p_player == 'PAPEL' and jogada_pc == 'PEDRA' or p_player == 'TESOURA' and jogada_pc == 'PAPEL' or p_player == 'PEDRA' and jogada_pc == 'TESOURA':
-        print('\033[1;32mVITÓRIA!\033[m'.center(50))
-    else:
-        print('\033[1;31mDERROTA!\033[m'.center(50))
-jogar()
+print()
 
+if jogada_player == jogada_pc:
+    print('\033[1;93mEMPATE!\033[m'.center(50))
+elif jogada_player == 'PAPEL' and jogada_pc == 'PEDRA' or jogada_player == 'PEDRA' and jogada_pc == 'TESOURA' or jogada_player == 'TESOURA' and jogada_pc == 'PAPEL':
+    print('\033[1;94mVITÓRIA!\033[m'.center(50))
+else:
+    print('\033[1;91mDERROTA!\033[m'.center(50))
