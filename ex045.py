@@ -47,4 +47,5 @@ print('Fechando...')
 for e in range(3, 0 , -1):
     print (e)
     sleep(1)
+#Obrigado por ver meu código!
 
