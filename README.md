@@ -11,13 +11,13 @@ Fiz esse jogo simples para continuar praticando minha lógica de programação u
 
 -Loops
 
--identações e aninhamentos
+-indentações e aninhamentos
 
           Funcionalidades: 
 
 -O jogador escolhe entre Pedra, Papel e Tesoura para jogar contra o "PC"
 
--O pc escolhe aleatoriamente entre as 3 opções e joga
+-O PC escolhe aleatoriamente entre as 3 opções e joga
 
 -O jogador pode ganhar, empatar ou perder
 
@@ -29,4 +29,4 @@ Fiz esse jogo simples para continuar praticando minha lógica de programação u
 
 -Abra a pasta do projeto
 
--Execute o arquivo ppt.py e divirta-se
+-Execute o arquivo `ppt.py` e divirta-se
