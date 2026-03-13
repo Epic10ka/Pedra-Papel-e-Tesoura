@@ -1,5 +1,5 @@
 #Rock, Paper and Scissors |GAME|
-Continuo evoluindo minha lógica de programação com esses exercícios rápidos do mestre Guanabara!
+
 
 <img width="568" height="430" alt="image" src="https://github.com/user-attachments/assets/b005982f-a8ad-4d5b-98ed-afc064c32a6c" />
 
